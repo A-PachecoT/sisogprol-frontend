@@ -1,0 +1,30 @@
+<section>
+  <h3>Seleccionar productos</h3>
+  <input type="text" placeholder="Buscar producto" />
+  <table>
+    <thead>
+    <tr>
+      <th>Código</th>
+      <th>Descripción del Producto</th>
+      <th>Marca</th>
+      <th>Med.</th>
+      <th>Cant. Disp.</th>
+      <th>Cant. Requerida</th>
+      <th>P. Unidad</th>
+      <th>Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.codigo}}</td>
+      <td>{{product.descripcion}}</td>
+      <td>{{product.marca}}</td>
+      <td>{{product.med}}</td>
+      <td>{{product.cantDisp}}</td>
+      <td><input type="number" [(ngModel)]="product.cantRequerida" /></td>
+      <td>{{product.pUnidad}}</td>
+      <td>{{product.total}}</td>
+    </tr>
+    </tbody>
+  </table>
+</section>
