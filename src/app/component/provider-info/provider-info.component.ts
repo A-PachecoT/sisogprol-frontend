@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { __decorate } from "tslib";
 
 @Component({
   selector: 'app-provider-info',

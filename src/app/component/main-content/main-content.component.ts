@@ -3,6 +3,7 @@ import {ProductSelectionComponent} from "../product-selection/product-selection.
 import {ProviderInfoComponent} from "../provider-info/provider-info.component";
 import {CompanyInfoComponent} from "../company-info/company-info.component";
 
+
 @Component({
   selector: 'app-main-content',
   standalone: true,
@@ -15,5 +16,5 @@ import {CompanyInfoComponent} from "../company-info/company-info.component";
   styleUrl: './main-content.component.css'
 })
 export class MainContentComponent {
-
+  title = 'Sisogprol';
 }
