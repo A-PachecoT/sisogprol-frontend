@@ -1,0 +1,48 @@
+<section class="panel-cotizaciones">
+  <h3>Panel de Cotizaciones</h3>
+  <button mat-raised-button color="primary">Generar Cotización</button>
+  <table mat-table [dataSource]="dataCotizaciones" class="mat-elevation-z8">
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Estado Column -->
+    <ng-container matColumnDef="estado">
+      <th mat-header-cell *matHeaderCellDef> Estado </th>
+      <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+    </ng-container>
+
+    <!-- Fecha Pedido Column -->
+    <ng-container matColumnDef="fechapedido">
+      <th mat-header-cell *matHeaderCellDef> Fecha Pedido </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechapedido | date}} </td>
+    </ng-container>
+
+    <!-- Precio Total Column -->
+    <ng-container matColumnDef="precio_total">
+      <th mat-header-cell *matHeaderCellDef> Precio Total </th>
+      <td mat-cell *matCellDef="let element"> {{element.precio_total | currency}} </td>
+    </ng-container>
+
+    <!-- Fecha Recibimiento Column -->
+    <ng-container matColumnDef="fecharecibimiento">
+      <th mat-header-cell *matHeaderCellDef> Fecha Recibimiento </th>
+      <td mat-cell *matCellDef="let element"> {{element.fecharecibimiento | date}} </td>
+    </ng-container>
+
+<!--     Actions Column-->
+<!--    <ng-container matColumnDef="actions">-->
+<!--      <th mat-header-cell *matHeaderCellDef> Acciones </th>-->
+<!--      <td mat-cell *matCellDef="let element">-->
+<!--        <button mat-button color="primary" (click)="getPedidoDescription(element.id_pedido).subscribe(desc => alert(desc))">Ver Pedido</button>-->
+<!--        <a mat-button [href]="element.url" target="_blank">Ver Cotización</a>-->
+<!--      </td>-->
+<!--    </ng-container>-->
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</section>
