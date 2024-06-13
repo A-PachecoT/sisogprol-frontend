@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {MatOption} from "@angular/material/core";
 import {MatFormField, MatLabel, MatSelect} from "@angular/material/select";
+import {MatInput} from "@angular/material/input";
 
 @Component({
   selector: 'app-provider-info',
@@ -12,7 +13,8 @@ import {MatFormField, MatLabel, MatSelect} from "@angular/material/select";
     MatOption,
     MatSelect,
     MatLabel,
-    MatFormField
+    MatFormField,
+    MatInput
   ],
   styleUrls: ['./provider-info.component.css']
 })

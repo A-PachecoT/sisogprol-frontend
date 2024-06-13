@@ -1,9 +1,8 @@
 <section class="product-selection">
   <h3>Seleccionar productos</h3>
-<!--  <mat-form-field appearance="fill">-->
-<!--    Buscar producto-->
-<!--    <input matInput placeholder="Buscar producto" />-->
-<!--  </mat-form-field>-->
+  <mat-form-field appearance="fill">
+    <input matInput placeholder="Buscar producto" />
+  </mat-form-field>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     < <!-- ID Column -->
@@ -45,4 +44,11 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+
+  <mat-paginator [length]="100"
+                 [pageSize]="10"
+                 [pageSizeOptions]="[5, 10, 25, 100]"
+                 aria-label="Select page">
+  </mat-paginator>
+
 </section>
