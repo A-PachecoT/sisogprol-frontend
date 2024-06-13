@@ -1,4 +1,3 @@
-// models/pedido.model.ts
 export interface Pedido {
   id: number;
   estado: string;
