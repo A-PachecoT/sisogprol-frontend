@@ -2,13 +2,73 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0.5em 1em;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 1.5em;
 }
 
+.jockey-one-regular {
+  font-family: "Jockey One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  color: #314351;
+  height: 100%;
+  padding-left: 0.5em;
+
+}
+
+.logo {
+  width: 50px;
+}
+
+.logo-div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
 .user-info {
   display: flex;
+  align-items: center;
+}
+
+.notification-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+}
+
+.user-details {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name-role {
+  display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.user-role {
+  color: #666;
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
 }

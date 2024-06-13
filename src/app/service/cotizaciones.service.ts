@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { Cotizaciones } from '../model/cotizaciones';
 
+// Datos de prueba
 const COTIZACIONES_DATA: Cotizaciones[] = [
   { id: 1, url: 'https://example.com/cotizacion1.pdf', estado: 'Abierta', fechapedido: new Date('2024-06-11'), fecharecibimiento: new Date('2024-06-15'), precio_total: 1500, id_pedido: 1, id_proveedor: 1, updated_at: new Date('2024-06-11T19:03:09.329793Z') },
   { id: 2, url: 'https://example.com/cotizacion2.pdf', estado: 'Cerrada', fechapedido: new Date('2024-06-12'), fecharecibimiento: new Date('2024-06-16'), precio_total: 3000, id_pedido: 2, id_proveedor: 2, updated_at: new Date('2024-06-12T19:03:09.329793Z') },

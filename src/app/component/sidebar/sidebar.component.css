@@ -1,6 +1,6 @@
 .sidebar {
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #fff;
 }
 
 .sidebar ul {
@@ -9,6 +9,30 @@
 }
 
 .sidebar li {
+  display: flex;
+  align-items: center;
   margin: 10px 0;
   cursor: pointer;
+  padding-bottom: 1em;
+}
+
+.sidebar img {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar a.button {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar a.button:hover {
+  text-decoration: underline;
+}
+
+.sidebar li:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  padding: 5px;
 }
