@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {HeaderComponent} from "./component/header/header.component";
 import {SidebarComponent} from "./component/sidebar/sidebar.component";
-import {MainContentComponent} from "./component/main-content/main-content.component";
+import {GenerarCotizacionComponent} from "./component/generar-cotizacion/generar-cotizacion.component";
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
@@ -14,8 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     RouterOutlet,
     HeaderComponent,
-    SidebarComponent,
-    MainContentComponent
+    SidebarComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainContentComponent } from './main-content.component';
+import { GenerarCotizacionComponent } from './generar-cotizacion.component';
 
 describe('MainContentComponent', () => {
-  let component: MainContentComponent;
-  let fixture: ComponentFixture<MainContentComponent>;
+  let component: GenerarCotizacionComponent;
+  let fixture: ComponentFixture<GenerarCotizacionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MainContentComponent]
+      imports: [GenerarCotizacionComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(MainContentComponent);
+
+    fixture = TestBed.createComponent(GenerarCotizacionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
