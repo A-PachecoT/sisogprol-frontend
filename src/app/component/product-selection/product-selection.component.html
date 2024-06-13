@@ -1,30 +1,62 @@
-<section>
+<section class="product-selection">
   <h3>Seleccionar productos</h3>
-  <input type="text" placeholder="Buscar producto" />
-  <table>
-    <thead>
-    <tr>
-      <th>Código</th>
-      <th>Descripción del Producto</th>
-      <th>Marca</th>
-      <th>Med.</th>
-      <th>Cant. Disp.</th>
-      <th>Cant. Requerida</th>
-      <th>P. Unidad</th>
-      <th>Total</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let product of products">
-      <td>{{product.codigo}}</td>
-      <td>{{product.descripcion}}</td>
-      <td>{{product.marca}}</td>
-      <td>{{product.med}}</td>
-      <td>{{product.cantDisp}}</td>
-      <td><input type="number" [(ngModel)]="product.cantRequerida" /></td>
-      <td>{{product.pUnidad}}</td>
-      <td>{{product.total}}</td>
-    </tr>
-    </tbody>
+<!--  <mat-form-field appearance="fill">-->
+<!--    Buscar producto-->
+<!--    <input matInput placeholder="Buscar producto" />-->
+<!--  </mat-form-field>-->
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Código Column -->
+    <ng-container matColumnDef="codigo">
+      <th mat-header-cell *matHeaderCellDef> Código </th>
+      <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
+    </ng-container>
+
+    <!-- Descripción Column -->
+    <ng-container matColumnDef="descripcion">
+      <th mat-header-cell *matHeaderCellDef> Descripción del Producto </th>
+      <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+    </ng-container>
+
+    <!-- Marca Column -->
+    <ng-container matColumnDef="marca">
+      <th mat-header-cell *matHeaderCellDef> Marca </th>
+      <td mat-cell *matCellDef="let element"> {{element.marca}} </td>
+    </ng-container>
+
+    <!-- Med Column -->
+    <ng-container matColumnDef="med">
+      <th mat-header-cell *matHeaderCellDef> Med. </th>
+      <td mat-cell *matCellDef="let element"> {{element.med}} </td>
+    </ng-container>
+
+    <!-- Cant. Disp. Column -->
+    <ng-container matColumnDef="cantDisp">
+      <th mat-header-cell *matHeaderCellDef> Cant. Disp. </th>
+      <td mat-cell *matCellDef="let element"> {{element.cantDisp}} </td>
+    </ng-container>
+
+    <!-- Cant. Requerida Column -->
+    <ng-container matColumnDef="cantRequerida">
+      <th mat-header-cell *matHeaderCellDef> Cant. Requerida </th>
+      <td mat-cell *matCellDef="let element">
+        <input type="number" [(ngModel)]="element.cantRequerida" />
+      </td>
+    </ng-container>
+
+    <!-- P. Unidad Column -->
+    <ng-container matColumnDef="pUnidad">
+      <th mat-header-cell *matHeaderCellDef> P. Unidad </th>
+      <td mat-cell *matCellDef="let element"> {{element.pUnidad}} </td>
+    </ng-container>
+
+    <!-- Total Column -->
+    <ng-container matColumnDef="total">
+      <th mat-header-cell *matHeaderCellDef> Total </th>
+      <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 </section>

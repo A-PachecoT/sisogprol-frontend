@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// const logo = require('../assets/brand/logo.svg').default as string;
 
 @Component({
   selector: 'app-header',

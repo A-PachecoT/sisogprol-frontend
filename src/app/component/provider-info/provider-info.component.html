@@ -1,42 +1,89 @@
-<section>
+<section class="provider-info">
   <h3>Información del Proveedor</h3>
   <form>
     <div class="form-group">
-      <label for="selectProveedor">Seleccionar Proveedor</label>
-      <select id="selectProveedor">
-        <option>Seleccionar Proveedor</option>
-        <option>Proveedor 1</option>
-        <option>Proveedor 2</option>
-      </select>
+      <mat-form-field appearance="fill">
+        <mat-label>Seleccionar Proveedor</mat-label>
+        <mat-select [(ngModel)]="selectedProvider" name="selectedProvider">
+          <mat-option *ngFor="let provider of providers" [value]="provider.value">
+            {{provider.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
     <div class="form-group">
-      <input type="radio" id="newProvider" name="providerOption" />
+      <input type="radio" id="newProvider" name="providerOption" [(ngModel)]="newProvider" />
       <label for="newProvider">Nuevo Proveedor</label>
     </div>
     <div class="form-row">
       <div class="form-group">
-        <label for="nombreProveedor">Nombre Proveedor</label>
-        <input type="text" id="nombreProveedor" placeholder="Enter item" />
+        <label for="providerName">Nombre Proveedor</label>
+        <input type="text" id="providerName" placeholder="Enter item" [(ngModel)]="providerName" name="providerName" />
       </div>
       <div class="form-group">
-        <label for="correoProveedor">Correo Electrónico Proveedor</label>
-        <input type="email" id="correoProveedor" placeholder="Enter description" />
+        <label for="providerEmail">Correo Electrónico Proveedor</label>
+        <input type="email" id="providerEmail" placeholder="Enter description" [(ngModel)]="providerEmail" name="providerEmail" />
       </div>
       <div class="form-group">
-        <label for="rucProveedor">RUC</label>
-        <input type="text" id="rucProveedor" placeholder="Enter description" />
+        <label for="providerRUC">RUC</label>
+        <input type="text" id="providerRUC" placeholder="Enter description" [(ngModel)]="providerRUC" name="providerRUC" />
       </div>
       <div class="form-group">
-        <label for="distritoProveedor">Distrito</label>
-        <input type="text" id="distritoProveedor" placeholder="Enter item" />
+        <label for="providerDistrict">Distrito</label>
+        <input type="text" id="providerDistrict" placeholder="Enter item" [(ngModel)]="providerDistrict" name="providerDistrict" />
       </div>
       <div class="form-group">
-        <label for="direccionProveedor">Dirección</label>
-        <input type="text" id="direccionProveedor" placeholder="Enter item" />
+        <label for="providerAddress">Dirección</label>
+        <input type="text" id="providerAddress" placeholder="Enter item" [(ngModel)]="providerAddress" name="providerAddress" />
       </div>
       <div class="form-group">
-        <label for="telefonoProveedor">Teléfono</label>
-        <input type="text" id="telefonoProveedor" placeholder="Enter item" />
+        <label for="providerPhone">Teléfono</label>
+        <input type="text" id="providerPhone" placeholder="Enter item" [(ngModel)]="providerPhone" name="providerPhone" />
+      </div>
+    </div>
+  </form>
+</section>
+<section class="provider-info">
+  <h3>Información del Proveedor</h3>
+  <form>
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Seleccionar Proveedor</mat-label>
+        <mat-select [(ngModel)]="selectedProvider" name="selectedProvider">
+          <mat-option *ngFor="let provider of providers" [value]="provider.value">
+            {{provider.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+<!--    <div class="form-group">-->
+<!--      <input type="radio" id="newProvider" name="providerOption" [(ngModel)]="newProvider" />-->
+<!--      <label for="newProvider">Nuevo Proveedor</label>-->
+<!--    </div>-->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="providerName">Nombre Proveedor</label>
+        <input type="text" id="providerName" placeholder="Enter item" [(ngModel)]="providerName" name="providerName" />
+      </div>
+      <div class="form-group">
+        <label for="providerEmail">Correo Electrónico Proveedor</label>
+        <input type="email" id="providerEmail" placeholder="Enter description" [(ngModel)]="providerEmail" name="providerEmail" />
+      </div>
+      <div class="form-group">
+        <label for="providerRUC">RUC</label>
+        <input type="text" id="providerRUC" placeholder="Enter description" [(ngModel)]="providerRUC" name="providerRUC" />
+      </div>
+      <div class="form-group">
+        <label for="providerDistrict">Distrito</label>
+        <input type="text" id="providerDistrict" placeholder="Enter item" [(ngModel)]="providerDistrict" name="providerDistrict" />
+      </div>
+      <div class="form-group">
+        <label for="providerAddress">Dirección</label>
+        <input type="text" id="providerAddress" placeholder="Enter item" [(ngModel)]="providerAddress" name="providerAddress" />
+      </div>
+      <div class="form-group">
+        <label for="providerPhone">Teléfono</label>
+        <input type="text" id="providerPhone" placeholder="Enter item" [(ngModel)]="providerPhone" name="providerPhone" />
       </div>
     </div>
   </form>
