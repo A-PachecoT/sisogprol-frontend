@@ -6,7 +6,6 @@ import { Cotizaciones } from '../../model/cotizaciones';
 import { Pedido } from '../../model/pedido';
 import {CurrencyPipe, DatePipe} from "@angular/common";
 import {MatAnchor, MatButton} from "@angular/material/button";
-import {map, Observable} from "rxjs";
 
 @Component({
   selector: 'app-panel-cotizaciones',
@@ -30,12 +29,4 @@ export class PanelCotizacionesComponent implements OnInit {
     });
   }
 
-  // getPedidoDescription(id_pedido: number): Observable<string> {
-    // return this.cotizacionesService.getPedido(id_pedido).pipe(
-    //   map((pedido: Pedido) => pedido.descripcion)
-    // );
-    // this.pedidosService.getPedido(id_pedido).subscribe(
-    //   this.dataPedidos = data;
-    // )
-  // }
 }
