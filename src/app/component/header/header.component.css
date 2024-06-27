@@ -16,6 +16,8 @@
   color: #314351;
   height: 100%;
   padding-left: 0.5em;
+  align-self: center;
+  align-content: center;
 }
 
 .logo {

@@ -1,6 +1,5 @@
 <section class="panel-cotizaciones">
   <h3>Panel de Cotizaciones</h3>
-  <button mat-raised-button color="primary">Generar Cotización</button>
   <table mat-table [dataSource]="dataCotizaciones" class="mat-elevation-z8">
 
     <!-- ID Column -->
@@ -45,4 +44,7 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+  <div class="generar-cotizacion-div">
+    <button mat-raised-button color="primary" >Generar Cotización</button>
+  </div>
 </section>

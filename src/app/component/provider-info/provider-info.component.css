@@ -12,8 +12,9 @@ h3 {
 
 .form-row {
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 1em;
 }
 
 .form-row .form-group {
