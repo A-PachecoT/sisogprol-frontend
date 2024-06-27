@@ -14,4 +14,12 @@ describe('PedidosService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('getPedido', (done: DoneFn) => {
+    service.getPedido(0).subscribe(value => {
+      expect(value).toBeInstanceOf(String);
+      expect(value.length).toBeGreaterThan(1);
+      done();
+    })
+  })
 });

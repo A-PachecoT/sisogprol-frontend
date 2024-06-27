@@ -14,4 +14,12 @@ describe('ProductService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('getProducts', (done: DoneFn) => {
+    service.getProducts().subscribe(value => {
+      expect(value).toBeInstanceOf(Array);
+      expect(value.length).toBeGreaterThan(1);
+      done();
+    })
+  })
 });
