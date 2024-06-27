@@ -14,4 +14,12 @@ describe('CotizacionesService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('getCotizaciones should return a list of cotizaciones', (done: DoneFn) => {
+    service.getCotizaciones().subscribe(value => {
+      expect(value).toBeInstanceOf(Array);
+      expect(value.length).toBeGreaterThan(1);
+      done();
+    })
+  })
 });
