@@ -4,7 +4,7 @@
     <mat-form-field appearance="fill" class="example-full-width">
       <mat-label>Seleccionar Proveedor</mat-label>
       <mat-select [(ngModel)]="selectedProvider" name="selectedProvider">
-        <mat-option *ngFor="let provider of providers" [value]="provider.value">
+        <mat-option *ngFor="let provider of provider_list" [value]="provider.value">
           {{provider.viewValue}}
         </mat-option>
       </mat-select>

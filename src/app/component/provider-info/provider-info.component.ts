@@ -3,6 +3,7 @@ import {FormsModule} from "@angular/forms";
 import {MatOption} from "@angular/material/core";
 import {MatFormField, MatLabel, MatSelect} from "@angular/material/select";
 import {MatInput} from "@angular/material/input";
+import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-provider-info',
@@ -14,7 +15,8 @@ import {MatInput} from "@angular/material/input";
     MatSelect,
     MatLabel,
     MatFormField,
-    MatInput
+    MatInput,
+    NgForOf
   ],
   styleUrls: ['./provider-info.component.css']
 })
@@ -28,9 +30,10 @@ export class ProviderInfoComponent {
   providerAddress: string = '';
   providerPhone: string = '';
 
-  providers = [
+  provider_list = [
     { value: 'provider1', viewValue: 'Proveedor 1' },
     { value: 'provider2', viewValue: 'Proveedor 2' },
     { value: 'provider3', viewValue: 'Proveedor 3' }
   ];
+
 }
